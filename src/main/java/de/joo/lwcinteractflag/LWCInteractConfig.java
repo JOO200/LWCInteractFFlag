@@ -11,6 +11,7 @@ import java.util.List;
 
 /**
  * Created by Johannes on 26.11.2017.
+ *
  */
 public class LWCInteractConfig extends Configuration {
 
