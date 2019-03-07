@@ -1,10 +1,8 @@
 package de.joo.lwcinteractflag;
 
-import de.exlll.configlib.Comment;
-import de.exlll.configlib.Configuration;
+import de.exlll.configlib.annotation.Comment;
+import de.exlll.configlib.configs.yaml.YamlConfiguration;
 import org.bukkit.Material;
-
-import java.io.IOException;
 import java.nio.file.Path;
 import java.util.Collections;
 import java.util.List;
@@ -13,16 +11,12 @@ import java.util.List;
  * Created by Johannes on 26.11.2017.
  *
  */
-public class LWCInteractConfig extends Configuration {
+public class LWCInteractConfig extends YamlConfiguration {
 
     protected LWCInteractConfig(Path configPath) {
         super(configPath);
 
-        try {
-            loadAndSave();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        loadAndSave();
     }
 
     @Comment("Whitelisted Materials (e.g. EnderChest")

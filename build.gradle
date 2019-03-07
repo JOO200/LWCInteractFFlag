@@ -26,9 +26,7 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
     compile group: 'tc.plugins', name: 'bukkit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
-    compile group: 'de.terraconia', name: 'Baba43Lib-Bukkit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
-    compile group: 'de.terraconia', name: 'ServerAPI-Bukkit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
-    compile group: 'de.exlll', name: 'configlib-bukkit', version: '1.4.0', changing: false, transitive: false
+    compile group: 'de.exlll', name: 'configlib-bukkit', version: '2.2.0', changing: false, transitive: false
     compile group: 'tc.plugins', name: 'worldguard', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
     compile group: 'tc.plugins', name: 'worldedit', version: 'SERVER-SNAPSHOT', changing: true, transitive: false
     compile group: 'tc.plugins', name: 'lwc', version: 'SERVER-SNAPSHOT', changing: true, transitive: false

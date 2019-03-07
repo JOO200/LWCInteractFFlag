@@ -1,6 +1,6 @@
 package de.joo.lwcinteractflag;
 
-import com.sk89q.worldguard.bukkit.WGBukkit;
+import com.sk89q.worldguard.WorldGuard;
 import com.sk89q.worldguard.bukkit.WorldGuardPlugin;
 import com.sk89q.worldguard.protection.flags.Flag;
 import com.sk89q.worldguard.protection.flags.StateFlag;
@@ -14,7 +14,7 @@ import java.nio.file.Paths;
  * Created by Johannes on 22.11.2017.
  */
 public class LWCInteractPlugin extends JavaPlugin {
-    public static final Flag LWC_INTERACT_FLAG = new StateFlag("lwc-interact", true);
+    public static final StateFlag LWC_INTERACT_FLAG = new StateFlag("lwc-interact", true);
     private LWCInteractListener listener;
     private LWCInteractConfig config;
 
@@ -28,14 +28,9 @@ public class LWCInteractPlugin extends JavaPlugin {
 
     @Override
     public void onLoad() {
-        WorldGuardPlugin plugin = WGBukkit.getPlugin();
-        if(plugin == null) {
-            return;
-        }
-        FlagRegistry flagRegistry = plugin.getFlagRegistry();
-        getLogger().info("Registered Flag.");
+        FlagRegistry registry = WorldGuard.getInstance().getFlagRegistry();
         try {
-            flagRegistry.register(LWC_INTERACT_FLAG);
+            registry.register(LWC_INTERACT_FLAG);
         } catch (FlagConflictException e) {
             getLogger().severe("Flag already registered.");
         }
