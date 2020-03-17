@@ -2,6 +2,5 @@ name: LWCInteractFlag
 version: 1.0
 author: JOO200
 main: de.joo.lwcinteractflag.LWCInteractPlugin
-loadBefore: [WorldGuard]
 depend: [WorldGuard, ConfigLib]
 api-version: 1.13

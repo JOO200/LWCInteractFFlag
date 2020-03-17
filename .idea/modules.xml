@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LWCInteractFlag.iml" filepath="$PROJECT_DIR$/.idea/modules/LWCInteractFlag.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LWCInteractFlag.iml" filepath="$PROJECT_DIR$/.idea/modules/LWCInteractFlag.iml" group="LWCInteractFlag" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LWCInteractFlag_main.iml" filepath="$PROJECT_DIR$/.idea/modules/LWCInteractFlag_main.iml" group="LWCInteractFlag" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/LWCInteractFlag_test.iml" filepath="$PROJECT_DIR$/.idea/modules/LWCInteractFlag_test.iml" group="LWCInteractFlag" />
     </modules>

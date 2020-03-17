@@ -19,8 +19,6 @@ if(project.hasProperty('tcGradleScripts')) {
 
 repositories {
     mavenCentral()
-    maven { url 'http://exlll.de:8081/artifactory/releases/' }
-    maven { url 'http://repo.citizensnpcs.co/' }
 }
 
 dependencies {

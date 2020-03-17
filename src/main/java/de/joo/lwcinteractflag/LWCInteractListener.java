@@ -40,7 +40,7 @@ public class LWCInteractListener implements Listener {
                 (BukkitAdapter.adapt(block.getLocation()), localPlayer, LWCInteractPlugin.LWC_INTERACT_FLAG);
         if(state != StateFlag.State.ALLOW) return;
 
-        if(config.whitelist.contains(block.getType())) event.setResult(Event.Result.ALLOW);
+        if(LWCInteractPlugin.whitelist.contains(block.getType())) event.setResult(Event.Result.ALLOW);
         if(!LWC.getInstance().isProtectable(block)) return;
         Protection protection = LWC.getInstance().findProtection(block);
         if(protection == null) return;
