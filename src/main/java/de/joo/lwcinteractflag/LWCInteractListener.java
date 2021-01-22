@@ -33,8 +33,8 @@ public class LWCInteractListener implements Listener {
         Player player = event.getCause().getFirstPlayer();
         if(player == null) return;
         final LocalPlayer localPlayer = WorldGuardPlugin.inst().wrapPlayer(player);
-        Block block = event.getBlocks().stream().findFirst().orElse(null);
-        if(block == null) return;
+        if (event.getBlocks().isEmpty()) return;
+        Block block = event.getBlocks().get(0);
         RegionQuery query = WorldGuard.getInstance().getPlatform().getRegionContainer().createQuery();
         StateFlag.State state = query.queryState
                 (BukkitAdapter.adapt(block.getLocation()), localPlayer, LWCInteractPlugin.LWC_INTERACT_FLAG);
